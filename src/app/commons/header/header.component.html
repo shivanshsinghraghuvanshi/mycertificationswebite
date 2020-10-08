@@ -99,7 +99,14 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#">My Account</a>
       </li>
-      <li class="nav-item"><a class="nav-link" href="#">Sign In</a></li>
+      <li *ngIf="authState !== 'signedin'" class="nav-item">
+        <a class="nav-link" routerLink="/login">Sign In</a>
+      </li>
+      <li *ngIf="authState === 'signedin'" class="nav-item">
+        <button class="btn btn-outline-primary btn-small" (click)="signOut()">
+          Sign Out
+        </button>
+      </li>
     </ul>
     <form hidden class="form-inline my-2 my-lg-0">
       <input

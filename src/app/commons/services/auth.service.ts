@@ -27,4 +27,13 @@ export class AuthService {
       return false;
     }));
   }
+
+  signOut(): Observable<boolean> {
+    return from(Auth.signOut().then(() => {
+      this.loggedIn.next(false);
+      return false;
+    }).catch(() => {
+      return true;
+    }));
+  }
 }
