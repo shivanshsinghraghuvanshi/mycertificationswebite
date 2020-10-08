@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,10 @@ import { SearchComponent } from './commons/search/search.component';
 import { LoginComponent } from './commons/login/login.component';
 import { CertificateRegistrationComponent } from './commons/certificate-registration/certificate-registration.component';
 
+import awsconfig from './../aws-exports';
+import Amplify, { Interactions } from 'aws-amplify';
+
+Amplify.configure(awsconfig);
 
 @NgModule({
   declarations: [
@@ -20,11 +25,12 @@ import { CertificateRegistrationComponent } from './commons/certificate-registra
     CertificateRegistrationComponent
   ],
   imports: [
+    AmplifyUIAngularModule,
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: []
 })
 export class AppModule { }

@@ -1,1 +1,20 @@
-<p>login works!</p>
+<br />
+<br />
+<br />
+<br />
+<div class="container">
+  <amplify-authenticator *ngIf="authState !== 'signedin'">
+    <div slot="sign-in" style="text-align: center; margin: auto">
+      <amplify-sign-in usernameAlias="email"> </amplify-sign-in>
+    </div>
+    <div slot="sign-up" style="text-align: center; margin: auto">
+      <amplify-sign-up></amplify-sign-up>
+    </div>
+  </amplify-authenticator>
+
+  <div *ngIf="authState === 'signedin' && user" class="App">
+    <br />
+    <amplify-sign-out class="col-2 float-right" buttonText="Log Out">
+    </amplify-sign-out>
+  </div>
+</div>

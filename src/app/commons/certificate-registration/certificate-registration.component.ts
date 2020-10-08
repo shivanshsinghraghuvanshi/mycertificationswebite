@@ -18,12 +18,14 @@ export class CertificateRegistrationComponent implements OnInit {
       centerName: 'ABCD Center',
       email: 'ssr.vg3@gmail.com',
       name: 'shivansh singh raghuvanshi',
-      phoneNumber: 7022921800,
-      certificationName: 'ABCEDE'
+      phoneNumber: '1234567891',
+      certificationName: 'ABCEDE',
+      id: '1'
     }).then(() => {
       this.success = true;
-    }).catch(() => {
+    }).catch((e) => {
       this.success = false;
+      console.log(e);
     });
   }
 }

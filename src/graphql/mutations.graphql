@@ -12,6 +12,7 @@ mutation CreateRegistration(
     email
     createdAt
     updatedAt
+    id
   }
 }
 mutation UpdateRegistration(
@@ -27,6 +28,7 @@ mutation UpdateRegistration(
     email
     createdAt
     updatedAt
+    id
   }
 }
 mutation DeleteRegistration(
@@ -42,5 +44,6 @@ mutation DeleteRegistration(
     email
     createdAt
     updatedAt
+    id
   }
 }

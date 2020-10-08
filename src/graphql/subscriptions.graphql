@@ -9,6 +9,7 @@ subscription OnCreateRegistration {
     email
     createdAt
     updatedAt
+    id
   }
 }
 subscription OnUpdateRegistration {
@@ -21,6 +22,7 @@ subscription OnUpdateRegistration {
     email
     createdAt
     updatedAt
+    id
   }
 }
 subscription OnDeleteRegistration {
@@ -33,5 +35,6 @@ subscription OnDeleteRegistration {
     email
     createdAt
     updatedAt
+    id
   }
 }

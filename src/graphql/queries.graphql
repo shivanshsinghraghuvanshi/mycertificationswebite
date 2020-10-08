@@ -9,6 +9,7 @@ query GetRegistration($id: ID!) {
     email
     createdAt
     updatedAt
+    id
   }
 }
 query ListRegistrations(
@@ -26,6 +27,7 @@ query ListRegistrations(
       email
       createdAt
       updatedAt
+      id
     }
     nextToken
   }

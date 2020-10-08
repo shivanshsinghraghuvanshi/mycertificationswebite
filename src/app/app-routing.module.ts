@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CertificateRegistrationComponent } from './commons/certificate-registration/certificate-registration.component';
+import { LoginComponent } from './commons/login/login.component';
 import { MainComponent } from './commons/main/main.component';
+import { AuthGuard } from './commons/services/auth.guard';
 
 
 const routes: Routes = [
@@ -9,7 +11,10 @@ const routes: Routes = [
     path: '', component: MainComponent
   },
   {
-    path: 'certificate-registration', component: CertificateRegistrationComponent
+    path: 'certificate-registration', component: CertificateRegistrationComponent, canActivate: [AuthGuard]
+  },
+  {
+    path: 'login', component: LoginComponent
   },
   { path: 'certifications', loadChildren: () => import('./certifications/certifications.module').then(m => m.CertificationsModule) },
   { path: 'schools', loadChildren: () => import('./schools/schools.module').then(m => m.SchoolsModule) },

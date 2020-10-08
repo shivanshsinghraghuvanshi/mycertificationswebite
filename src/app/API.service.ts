@@ -10,18 +10,19 @@ export type CreateRegistrationInput = {
   name: string;
   address: string;
   certificationName: string;
-  phoneNumber: number;
+  phoneNumber: string;
   centerName: string;
   email: string;
   createdAt?: string | null;
   updatedAt?: string | null;
+  id: string;
 };
 
 export type ModelRegistrationConditionInput = {
   name?: ModelStringInput | null;
   address?: ModelStringInput | null;
   certificationName?: ModelStringInput | null;
-  phoneNumber?: ModelIntInput | null;
+  phoneNumber?: ModelStringInput | null;
   centerName?: ModelStringInput | null;
   email?: ModelStringInput | null;
   createdAt?: ModelStringInput | null;
@@ -70,27 +71,16 @@ export type ModelSizeInput = {
   between?: Array<number | null> | null;
 };
 
-export type ModelIntInput = {
-  ne?: number | null;
-  eq?: number | null;
-  le?: number | null;
-  lt?: number | null;
-  ge?: number | null;
-  gt?: number | null;
-  between?: Array<number | null> | null;
-  attributeExists?: boolean | null;
-  attributeType?: ModelAttributeTypes | null;
-};
-
 export type UpdateRegistrationInput = {
   name?: string | null;
   address?: string | null;
   certificationName?: string | null;
-  phoneNumber?: number | null;
+  phoneNumber?: string | null;
   centerName?: string | null;
   email?: string | null;
   createdAt?: string | null;
   updatedAt?: string | null;
+  id: string;
 };
 
 export type DeleteRegistrationInput = {
@@ -101,11 +91,12 @@ export type ModelRegistrationFilterInput = {
   name?: ModelStringInput | null;
   address?: ModelStringInput | null;
   certificationName?: ModelStringInput | null;
-  phoneNumber?: ModelIntInput | null;
+  phoneNumber?: ModelStringInput | null;
   centerName?: ModelStringInput | null;
   email?: ModelStringInput | null;
   createdAt?: ModelStringInput | null;
   updatedAt?: ModelStringInput | null;
+  id?: ModelStringInput | null;
   and?: Array<ModelRegistrationFilterInput | null> | null;
   or?: Array<ModelRegistrationFilterInput | null> | null;
   not?: ModelRegistrationFilterInput | null;
@@ -116,11 +107,12 @@ export type CreateRegistrationMutation = {
   name: string;
   address: string;
   certificationName: string;
-  phoneNumber: number;
+  phoneNumber: string;
   centerName: string;
   email: string;
   createdAt: string | null;
   updatedAt: string | null;
+  id: string;
 };
 
 export type UpdateRegistrationMutation = {
@@ -128,11 +120,12 @@ export type UpdateRegistrationMutation = {
   name: string;
   address: string;
   certificationName: string;
-  phoneNumber: number;
+  phoneNumber: string;
   centerName: string;
   email: string;
   createdAt: string | null;
   updatedAt: string | null;
+  id: string;
 };
 
 export type DeleteRegistrationMutation = {
@@ -140,11 +133,12 @@ export type DeleteRegistrationMutation = {
   name: string;
   address: string;
   certificationName: string;
-  phoneNumber: number;
+  phoneNumber: string;
   centerName: string;
   email: string;
   createdAt: string | null;
   updatedAt: string | null;
+  id: string;
 };
 
 export type GetRegistrationQuery = {
@@ -152,11 +146,12 @@ export type GetRegistrationQuery = {
   name: string;
   address: string;
   certificationName: string;
-  phoneNumber: number;
+  phoneNumber: string;
   centerName: string;
   email: string;
   createdAt: string | null;
   updatedAt: string | null;
+  id: string;
 };
 
 export type ListRegistrationsQuery = {
@@ -166,11 +161,12 @@ export type ListRegistrationsQuery = {
     name: string;
     address: string;
     certificationName: string;
-    phoneNumber: number;
+    phoneNumber: string;
     centerName: string;
     email: string;
     createdAt: string | null;
     updatedAt: string | null;
+    id: string;
   } | null> | null;
   nextToken: string | null;
 };
@@ -180,11 +176,12 @@ export type OnCreateRegistrationSubscription = {
   name: string;
   address: string;
   certificationName: string;
-  phoneNumber: number;
+  phoneNumber: string;
   centerName: string;
   email: string;
   createdAt: string | null;
   updatedAt: string | null;
+  id: string;
 };
 
 export type OnUpdateRegistrationSubscription = {
@@ -192,11 +189,12 @@ export type OnUpdateRegistrationSubscription = {
   name: string;
   address: string;
   certificationName: string;
-  phoneNumber: number;
+  phoneNumber: string;
   centerName: string;
   email: string;
   createdAt: string | null;
   updatedAt: string | null;
+  id: string;
 };
 
 export type OnDeleteRegistrationSubscription = {
@@ -204,11 +202,12 @@ export type OnDeleteRegistrationSubscription = {
   name: string;
   address: string;
   certificationName: string;
-  phoneNumber: number;
+  phoneNumber: string;
   centerName: string;
   email: string;
   createdAt: string | null;
   updatedAt: string | null;
+  id: string;
 };
 
 @Injectable({
@@ -230,6 +229,7 @@ export class APIService {
           email
           createdAt
           updatedAt
+          id
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -258,6 +258,7 @@ export class APIService {
           email
           createdAt
           updatedAt
+          id
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -286,6 +287,7 @@ export class APIService {
           email
           createdAt
           updatedAt
+          id
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -311,6 +313,7 @@ export class APIService {
           email
           createdAt
           updatedAt
+          id
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -339,6 +342,7 @@ export class APIService {
             email
             createdAt
             updatedAt
+            id
           }
           nextToken
         }
@@ -373,6 +377,7 @@ export class APIService {
           email
           createdAt
           updatedAt
+          id
         }
       }`
     )
@@ -393,6 +398,7 @@ export class APIService {
           email
           createdAt
           updatedAt
+          id
         }
       }`
     )
@@ -413,6 +419,7 @@ export class APIService {
           email
           createdAt
           updatedAt
+          id
         }
       }`
     )
