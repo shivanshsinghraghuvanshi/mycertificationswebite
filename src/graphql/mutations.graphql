@@ -1,0 +1,43 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateRegistration(
+  $input: CreateRegistrationInput!
+  $condition: ModelRegistrationConditionInput
+) {
+  createRegistration(input: $input, condition: $condition) {
+    name
+    address
+    phoneNumber
+    centerName
+    email
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateRegistration(
+  $input: UpdateRegistrationInput!
+  $condition: ModelRegistrationConditionInput
+) {
+  updateRegistration(input: $input, condition: $condition) {
+    name
+    address
+    phoneNumber
+    centerName
+    email
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteRegistration(
+  $input: DeleteRegistrationInput!
+  $condition: ModelRegistrationConditionInput
+) {
+  deleteRegistration(input: $input, condition: $condition) {
+    name
+    address
+    phoneNumber
+    centerName
+    email
+    createdAt
+    updatedAt
+  }
+}

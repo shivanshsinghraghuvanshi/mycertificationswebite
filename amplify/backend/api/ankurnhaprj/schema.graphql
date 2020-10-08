@@ -1,0 +1,9 @@
+type Registration @model {
+  name: String!
+  address: String!
+  phoneNumber: Int!
+  centerName: String!
+  email: AWSEmail!
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}

@@ -1,0 +1,30 @@
+# this is an auto generated file. This will be overwritten
+query GetRegistration($id: ID!) {
+  getRegistration(id: $id) {
+    name
+    address
+    phoneNumber
+    centerName
+    email
+    createdAt
+    updatedAt
+  }
+}
+query ListRegistrations(
+  $filter: ModelRegistrationFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listRegistrations(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      name
+      address
+      phoneNumber
+      centerName
+      email
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}

@@ -1,0 +1,34 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateRegistration {
+  onCreateRegistration {
+    name
+    address
+    phoneNumber
+    centerName
+    email
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateRegistration {
+  onUpdateRegistration {
+    name
+    address
+    phoneNumber
+    centerName
+    email
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteRegistration {
+  onDeleteRegistration {
+    name
+    address
+    phoneNumber
+    centerName
+    email
+    createdAt
+    updatedAt
+  }
+}
