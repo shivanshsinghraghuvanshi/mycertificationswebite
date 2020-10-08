@@ -9,6 +9,7 @@ import { Observable } from "zen-observable-ts";
 export type CreateRegistrationInput = {
   name: string;
   address: string;
+  certificationName: string;
   phoneNumber: number;
   centerName: string;
   email: string;
@@ -19,6 +20,7 @@ export type CreateRegistrationInput = {
 export type ModelRegistrationConditionInput = {
   name?: ModelStringInput | null;
   address?: ModelStringInput | null;
+  certificationName?: ModelStringInput | null;
   phoneNumber?: ModelIntInput | null;
   centerName?: ModelStringInput | null;
   email?: ModelStringInput | null;
@@ -83,6 +85,7 @@ export type ModelIntInput = {
 export type UpdateRegistrationInput = {
   name?: string | null;
   address?: string | null;
+  certificationName?: string | null;
   phoneNumber?: number | null;
   centerName?: string | null;
   email?: string | null;
@@ -97,6 +100,7 @@ export type DeleteRegistrationInput = {
 export type ModelRegistrationFilterInput = {
   name?: ModelStringInput | null;
   address?: ModelStringInput | null;
+  certificationName?: ModelStringInput | null;
   phoneNumber?: ModelIntInput | null;
   centerName?: ModelStringInput | null;
   email?: ModelStringInput | null;
@@ -111,6 +115,7 @@ export type CreateRegistrationMutation = {
   __typename: "Registration";
   name: string;
   address: string;
+  certificationName: string;
   phoneNumber: number;
   centerName: string;
   email: string;
@@ -122,6 +127,7 @@ export type UpdateRegistrationMutation = {
   __typename: "Registration";
   name: string;
   address: string;
+  certificationName: string;
   phoneNumber: number;
   centerName: string;
   email: string;
@@ -133,6 +139,7 @@ export type DeleteRegistrationMutation = {
   __typename: "Registration";
   name: string;
   address: string;
+  certificationName: string;
   phoneNumber: number;
   centerName: string;
   email: string;
@@ -144,6 +151,7 @@ export type GetRegistrationQuery = {
   __typename: "Registration";
   name: string;
   address: string;
+  certificationName: string;
   phoneNumber: number;
   centerName: string;
   email: string;
@@ -157,6 +165,7 @@ export type ListRegistrationsQuery = {
     __typename: "Registration";
     name: string;
     address: string;
+    certificationName: string;
     phoneNumber: number;
     centerName: string;
     email: string;
@@ -170,6 +179,7 @@ export type OnCreateRegistrationSubscription = {
   __typename: "Registration";
   name: string;
   address: string;
+  certificationName: string;
   phoneNumber: number;
   centerName: string;
   email: string;
@@ -181,6 +191,7 @@ export type OnUpdateRegistrationSubscription = {
   __typename: "Registration";
   name: string;
   address: string;
+  certificationName: string;
   phoneNumber: number;
   centerName: string;
   email: string;
@@ -192,6 +203,7 @@ export type OnDeleteRegistrationSubscription = {
   __typename: "Registration";
   name: string;
   address: string;
+  certificationName: string;
   phoneNumber: number;
   centerName: string;
   email: string;
@@ -212,6 +224,7 @@ export class APIService {
           __typename
           name
           address
+          certificationName
           phoneNumber
           centerName
           email
@@ -239,6 +252,7 @@ export class APIService {
           __typename
           name
           address
+          certificationName
           phoneNumber
           centerName
           email
@@ -266,6 +280,7 @@ export class APIService {
           __typename
           name
           address
+          certificationName
           phoneNumber
           centerName
           email
@@ -290,6 +305,7 @@ export class APIService {
           __typename
           name
           address
+          certificationName
           phoneNumber
           centerName
           email
@@ -317,6 +333,7 @@ export class APIService {
             __typename
             name
             address
+            certificationName
             phoneNumber
             centerName
             email
@@ -350,6 +367,7 @@ export class APIService {
           __typename
           name
           address
+          certificationName
           phoneNumber
           centerName
           email
@@ -369,6 +387,7 @@ export class APIService {
           __typename
           name
           address
+          certificationName
           phoneNumber
           centerName
           email
@@ -388,6 +407,7 @@ export class APIService {
           __typename
           name
           address
+          certificationName
           phoneNumber
           centerName
           email

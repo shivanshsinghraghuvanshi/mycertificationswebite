@@ -6,6 +6,7 @@ mutation CreateRegistration(
   createRegistration(input: $input, condition: $condition) {
     name
     address
+    certificationName
     phoneNumber
     centerName
     email
@@ -20,6 +21,7 @@ mutation UpdateRegistration(
   updateRegistration(input: $input, condition: $condition) {
     name
     address
+    certificationName
     phoneNumber
     centerName
     email
@@ -34,6 +36,7 @@ mutation DeleteRegistration(
   deleteRegistration(input: $input, condition: $condition) {
     name
     address
+    certificationName
     phoneNumber
     centerName
     email

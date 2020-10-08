@@ -3,6 +3,7 @@ query GetRegistration($id: ID!) {
   getRegistration(id: $id) {
     name
     address
+    certificationName
     phoneNumber
     centerName
     email
@@ -19,6 +20,7 @@ query ListRegistrations(
     items {
       name
       address
+      certificationName
       phoneNumber
       centerName
       email

@@ -1,1 +1,79 @@
-<p>certificate-registration works!</p>
+<br />
+<br />
+<br />
+<div class="container my-form">
+  <form class="col-6">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Certification Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Certification Name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+      />
+      <small id="emailHelp" class="form-text text-muted"
+        >We'll never share your email with anyone else.</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Your Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter your name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Address</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter your address"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Phone Number</label>
+      <input
+        type="tel"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter your contact number"
+      />
+      <small id="emailHelp" class="form-text text-muted"
+        >We'll never share your contact number with anyone else.</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Center Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter your center name"
+      />
+    </div>
+  </form>
+</div>
+<div class="col-12">
+  <button class="btn btn-outline-secondary" (click)="register()">
+    Register
+  </button>
+</div>
+<p *ngIf="success">The registration has been saved</p>

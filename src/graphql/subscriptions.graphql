@@ -3,6 +3,7 @@ subscription OnCreateRegistration {
   onCreateRegistration {
     name
     address
+    certificationName
     phoneNumber
     centerName
     email
@@ -14,6 +15,7 @@ subscription OnUpdateRegistration {
   onUpdateRegistration {
     name
     address
+    certificationName
     phoneNumber
     centerName
     email
@@ -25,6 +27,7 @@ subscription OnDeleteRegistration {
   onDeleteRegistration {
     name
     address
+    certificationName
     phoneNumber
     centerName
     email

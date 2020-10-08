@@ -1,6 +1,7 @@
 type Registration @model {
   name: String!
   address: String!
+  certificationName: String!
   phoneNumber: Int!
   centerName: String!
   email: AWSEmail!
