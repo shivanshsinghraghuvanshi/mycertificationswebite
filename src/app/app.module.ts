@@ -7,6 +7,7 @@ import { HeaderComponent } from './commons/header/header.component';
 import { MainComponent } from './commons/main/main.component';
 import { SearchComponent } from './commons/search/search.component';
 import { LoginComponent } from './commons/login/login.component';
+import { CertificateRegistrationComponent } from './commons/certificate-registration/certificate-registration.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { LoginComponent } from './commons/login/login.component';
     HeaderComponent,
     MainComponent,
     SearchComponent,
-    LoginComponent
+    LoginComponent,
+    CertificateRegistrationComponent
   ],
   imports: [
     BrowserModule,

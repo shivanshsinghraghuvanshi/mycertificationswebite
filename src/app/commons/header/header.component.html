@@ -14,7 +14,9 @@
   <div class="collapse navbar-collapse" id="navbar5">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item btn-group">
-        <a class="nav-link" href="#"> Certifications </a>
+        <a class="nav-link" href="#" routerLink="/certifications">
+          Certifications
+        </a>
         <a
           class="nav-link dropdown-toggle dropdown-toggle-split"
           href="#"
@@ -26,31 +28,80 @@
           <span class="sr-only">Toggle Dropdown</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" routerLink="/certifications/get-certified"
+            >Get Certified</a
+          >
+          <a class="dropdown-item" routerLink="/certifications/study-materials"
+            >Study Materials</a
+          >
+          <a class="dropdown-item" routerLink="/certifications/renew-certs"
+            >Renew/Reinstate Certificate</a
+          >
+          <a
+            class="dropdown-item"
+            routerLink="/certifications/continuous-education"
+            >Continuing Education</a
+          >
+          <a
+            class="dropdown-item"
+            routerLink="/certifications/millitary-benefits"
+            >Military Benefits</a
+          >
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <h6 class="dropdown-header">THE PROFESSIONS</h6>
+          <a class="dropdown-item" routerLink="/certifications/cmma"
+            >Medical Assistant(CCMA)</a
+          >
+          <a class="dropdown-item" routerLink="/certifications/cpt"
+            >Phlebotomy Technicians(CPT)</a
+          >
+          <a class="dropdown-item" routerLink="/certifications/cmma"
+            >Medical Administrative Assistant(CMMA)</a
+          >
+          <a class="dropdown-item" routerLink="/certifications/cet"
+            >EKG Technicians(CET)</a
+          >
+          <a class="dropdown-item" routerLink="/certifications/cehrs"
+            >Electronic Health Records Specialist(CEHRS)</a
+          >
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/certifications/pharmacy-tech"
+            >Pharmacy Technician</a
+          >
+          <a
+            class="dropdown-item"
+            routerLink="/certifications/billing-specialist"
+            >Billing and Coding Specialist</a
+          >
+          <a
+            class="dropdown-item"
+            routerLink="/certifications/patient-care-tech"
+            >Patient Care Technician</a
+          >
         </div>
       </li>
-      <li class="nav-item"><a class="nav-link" href="#">For Schools</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">For Employers</a></li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Create Resources</a>
+        <a class="nav-link disabled" href="#">For Schools</a>
       </li>
-      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">For Employers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Create Resources</a>
+      </li>
+      <li class="nav-item"><a class="nav-link disabled" href="#">About</a></li>
     </ul>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">HealthCenter</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">My Account</a></li>
+      <li class="nav-item"><a class="nav-link disabled" href="#">Shop</a></li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">HealthCenter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">My Account</a>
+      </li>
       <li class="nav-item"><a class="nav-link" href="#">Sign In</a></li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form hidden class="form-inline my-2 my-lg-0">
       <input
         class="form-control mr-sm-2"
         type="search"
