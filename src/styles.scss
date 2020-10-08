@@ -12,5 +12,10 @@ $theme-colors: (
   danger: #e06c78,
   medium: #9b9b9b,
 );
-
 @import "node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+html,
+body {
+  font-family: "Poppins";
+}

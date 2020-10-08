@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="card" *ngFor="let item of items">
     <div class="box">
       <div class="content">
@@ -11,4 +11,23 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+<br />
+<section class="row justify-content-center">
+  <div class="card col-md-3 mb-3" *ngFor="let item of items">
+    <img src="/assets/images/1.png" class="card-img-top no-margin" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ item.title }}
+      </h5>
+      <p class="card-text">
+        {{ item.description }}
+      </p>
+      <a
+        class="btn btn-outline-secondary"
+        routerLink="/certificate-registration"
+        >Register</a
+      >
+    </div>
+  </div>
+</section>
